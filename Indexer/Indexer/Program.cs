@@ -82,12 +82,15 @@ namespace Indexer
         "Sunil",
         "Rubic");
 
-      IndexedNames names = new IndexedNames();
+      IndexedNames names3 = new IndexedNames();
       //using the first indexer with int parameter to reverse the order
       for (int i = 0; i < IndexedNames.size; i++)
       {
-        names[i] = names_2[IndexedNames.size -i];
+        names3[i] = names_2[IndexedNames.size -i];
       }
+
+      // What kind of copy does this really do!!?
+      IndexedNames names = names3;
 
       //using the first indexer with int parameter to print the list
       for (int i = 0; i < IndexedNames.size; i++)
