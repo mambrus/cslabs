@@ -73,7 +73,7 @@ namespace Indexer
 
     static void Main(string[] args)
     {
-      IndexedNames names = new IndexedNames(
+      IndexedNames names_2 = new IndexedNames(
         "Zara",
         "Riz",
         "Nuha",
@@ -82,7 +82,14 @@ namespace Indexer
         "Sunil",
         "Rubic");
 
-      //using the first indexer with int parameter
+      IndexedNames names = new IndexedNames();
+      //using the first indexer with int parameter to reverse the order
+      for (int i = 0; i < IndexedNames.size; i++)
+      {
+        names[i] = names_2[IndexedNames.size -i];
+      }
+
+      //using the first indexer with int parameter to print the list
       for (int i = 0; i < IndexedNames.size; i++)
       {
         Console.WriteLine(i + ": " + names[i]);
