@@ -10,11 +10,20 @@ namespace Indexer
   {
     private string[] namelist = new string[size];
     static public int size = 10;
+
     public IndexedNames()
     {
       for (int i = 0; i < size; i++)
       {
         namelist[i] = "N. A.";
+      }
+    }
+
+    public IndexedNames(params string[] arglist)
+    {
+      for (int i = 0; i < arglist.Length; i++)
+      {
+        namelist[i] = arglist[i];
       }
     }
 
@@ -43,6 +52,7 @@ namespace Indexer
         }
       }
     }
+
     public int this[string name]
     {
       get
@@ -63,23 +73,25 @@ namespace Indexer
 
     static void Main(string[] args)
     {
-      IndexedNames names = new IndexedNames();
-      names[0] = "Zara";
-      names[1] = "Riz";
-      names[2] = "Nuha";
-      names[3] = "Asif";
-      names[4] = "Davinder";
-      names[5] = "Sunil";
-      names[6] = "Rubic";
+      IndexedNames names = new IndexedNames(
+        "Zara",
+        "Riz",
+        "Nuha",
+        "Asif",
+        "Davinder",
+        "Sunil",
+        "Rubic");
 
       //using the first indexer with int parameter
       for (int i = 0; i < IndexedNames.size; i++)
       {
-        Console.WriteLine(names[i]);
+        Console.WriteLine(i + ": " + names[i]);
       }
 
       //using the second indexer with the string parameter
-      Console.WriteLine(names["Nuha"]);
+      Console.WriteLine("Type which name to find it's index for:");
+      string name = Console.ReadLine();
+      Console.WriteLine("Indexed is: " + names[name]);
       Console.ReadKey();
     }
   }
