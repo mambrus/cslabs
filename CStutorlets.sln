@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Operator_overloading", "Ope
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexer", "Indexer\Indexer.csproj", "{CD496844-F294-4017-AE0A-DA7FA8099418}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{D255A93F-3575-4616-83A0-E59E636127A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CD496844-F294-4017-AE0A-DA7FA8099418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD496844-F294-4017-AE0A-DA7FA8099418}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD496844-F294-4017-AE0A-DA7FA8099418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D255A93F-3575-4616-83A0-E59E636127A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D255A93F-3575-4616-83A0-E59E636127A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D255A93F-3575-4616-83A0-E59E636127A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D255A93F-3575-4616-83A0-E59E636127A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
