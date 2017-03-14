@@ -9,6 +9,7 @@ namespace Generics
   public class MyGenericArray<T>
   {
     private T[] array;
+
     public MyGenericArray(int size)
     {
       array = new T[size + 1];
@@ -53,7 +54,7 @@ namespace Generics
       //setting values
       for (int c = 0; c < 5; c++)
       {
-        charArray.setItem(c, (char)(c + 97));
+        charArray.setItem(c, (char) (c + 97));
       }
 
       //retrieving the values
