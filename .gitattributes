@@ -1,13 +1,60 @@
 # # https://github.com/alexkaratarakis/gitattributes/blob/master/Common.gitattributes
 
-# # Auto detect text files and perform LF normalization
+# Auto detect text files and perform LF normalization
+# http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
 * text=auto
 
-*.cs     diff=csharp
+# Add header-metadata for git-external diff programs
+#==================================================
+*.cs    diff=csharp
+*.cpp   diff=cpp
+*.cxx   diff=cpp
+*.c     diff=cpp
+*.h     diff=cpp
+*.tpp     diff=cpp
 
-*.sln    text eol=crlf
-*.csproj text eol=crlf
+#*.sln    text eol=crlf
+#*.csproj text eol=crlf
 
-*.exe    binary
-*.exe filter=lfs diff=lfs merge=lfs -text
-*.dll filter=lfs diff=lfs merge=lfs -text
+#*.exe    binary
+#*.exe filter=lfs diff=lfs merge=lfs -text
+#*.dll filter=lfs diff=lfs merge=lfs -text
+
+# C++ part
+#================================================
+#sources
+*.c text
+*.cc text
+*.cxx text
+*.cpp text
+*.c++ text
+*.hpp text
+*.h text
+*.h++ text
+*.hh text
+
+# Compiled Object files
+*.slo binary
+*.lo binary
+*.o binary
+*.obj binary
+
+# Precompiled Headers
+*.gch binary
+*.pch binary
+
+# Compiled Dynamic libraries
+*.so binary
+*.dylib binary
+*.dll binary
+
+# Compiled Static libraries
+*.lai binary
+*.la binary
+*.a binary
+*.lib binary
+
+# Executables
+*.exe binary
+*.out binary
+*.app binary
