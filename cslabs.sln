@@ -19,11 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{BC9264FB-7F24-4389-9E68-95CC7B540C58}"
-	ProjectSection(SolutionItems) = preProject
-		doc\Learnaing_by_doing.md = doc\Learnaing_by_doing.md
-	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Learnaing_by_doing", "Learnaing_by_doing", "{E7233E91-B97B-460A-94AC-98B6145D5817}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Learning_by_doing", "Learning_by_doing", "{E7233E91-B97B-460A-94AC-98B6145D5817}"
 	ProjectSection(SolutionItems) = preProject
 		doc\Learnaing_by_doing\DotNET.md = doc\Learnaing_by_doing\DotNET.md
 		doc\Learnaing_by_doing\LanguageCSharp.md = doc\Learnaing_by_doing\LanguageCSharp.md
