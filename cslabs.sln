@@ -11,7 +11,34 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{E157384D-8F81-42D1-BA96-273298C1001B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "polygons_cs", "..\..\it_shapeup\polygons_cs\polygons_cs\polygons_cs.csproj", "{7F10EA04-86E8-4335-B9A5-54688087817A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "polygons_cs", "..\polygons_cs\polygons_cs\polygons_cs.csproj", "{7F10EA04-86E8-4335-B9A5-54688087817A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EE73D4D8-9A1A-4628-8C37-E1478D9E8968}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{BC9264FB-7F24-4389-9E68-95CC7B540C58}"
+	ProjectSection(SolutionItems) = preProject
+		doc\Learnaing_by_doing.md = doc\Learnaing_by_doing.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Learnaing_by_doing", "Learnaing_by_doing", "{E7233E91-B97B-460A-94AC-98B6145D5817}"
+	ProjectSection(SolutionItems) = preProject
+		doc\Learnaing_by_doing\DotNET.md = doc\Learnaing_by_doing\DotNET.md
+		doc\Learnaing_by_doing\LanguageCSharp.md = doc\Learnaing_by_doing\LanguageCSharp.md
+		doc\Learnaing_by_doing\Logging.md = doc\Learnaing_by_doing\Logging.md
+		doc\Learnaing_by_doing\ServiceFabric.md = doc\Learnaing_by_doing\ServiceFabric.md
+		doc\Learnaing_by_doing\Tools.md = doc\Learnaing_by_doing\Tools.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C8E6821A-93D1-4884-8443-F77038ACC852}"
+	ProjectSection(SolutionItems) = preProject
+		doc\Learnaing_by_doing\Tools\Cygwin.md = doc\Learnaing_by_doing\Tools\Cygwin.md
+		doc\Learnaing_by_doing\Tools\Screen.md = doc\Learnaing_by_doing\Tools\Screen.md
+		doc\Learnaing_by_doing\Tools\Vim.md = doc\Learnaing_by_doing\Tools\Vim.md
+		doc\Learnaing_by_doing\Tools\Visualstudio.md = doc\Learnaing_by_doing\Tools\Visualstudio.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +69,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC9264FB-7F24-4389-9E68-95CC7B540C58} = {EE73D4D8-9A1A-4628-8C37-E1478D9E8968}
+		{E7233E91-B97B-460A-94AC-98B6145D5817} = {BC9264FB-7F24-4389-9E68-95CC7B540C58}
+		{C8E6821A-93D1-4884-8443-F77038ACC852} = {E7233E91-B97B-460A-94AC-98B6145D5817}
 	EndGlobalSection
 EndGlobal
