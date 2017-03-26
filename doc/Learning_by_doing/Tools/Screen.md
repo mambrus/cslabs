@@ -1,24 +1,15 @@
-# Learning by doing **X**
+# Learning by doing **Screen**
 
-## Plan / work
+As windows is a console-unfriendly environment, the UNIX utility *Screen* is
+used to compensate for this flaw.
 
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
+Screen default short-cuts clash with two of my other favourite productivity-tools:
 
-### Check-list
-
-## Fundamentals
-
-## Targeted areas
+* Vim
+* Terminal (common settings, i.e. Emacs inspired)
 
 ## References
 
-### Tutorials & Labs
+* [in-project .screenrc](Screen/DOT.screen.rc)
+
 
