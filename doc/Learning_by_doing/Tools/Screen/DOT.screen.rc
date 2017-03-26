@@ -20,9 +20,9 @@ hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
 
 activity "Activity in %t(%n)"
 
-## Browse tabs using <S>-{right/left} arrow
-bindkey ^[[1;2D prev
-bindkey ^[[1;2C next
+## Browse tabs using <C>-{right/left} arrow
+bindkey ^[[1;5D prev
+bindkey ^[[1;5C next
 
 ## Re-map Screen hot-key to <C>-z
 escape ^zz
