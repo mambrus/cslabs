@@ -20,8 +20,9 @@ hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
 
 activity "Activity in %t(%n)"
 
-bindkey -k k6 prev
-bindkey -k k7 next
+## Browse tabs using <S>-{right/left} arrow
+bindkey ^[[1;2D prev
+bindkey ^[[1;2C next
 
 shelltitle "shell"
 shell -$SHELL

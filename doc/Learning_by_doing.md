@@ -18,7 +18,7 @@ area is only used for notes as there will brobably be plenty.
 
 - [ ] [C#](Learning_by_doing/LanguageCSharp.md)
 - [ ] [.NET](Learning_by_doing/DotNET.md)
-- [ ] [Typescript/JAvascript & NodeJS](Learning_by_doing/LanguageJS.md) - 
+- [ ] [Typescript/JAvascript & NodeJS](Learning_by_doing/LanguageJS.md) -
 	  Typescript/JAvascript & NodeJS
 - [ ] [ServiceFabric](Learning_by_doing/ServiceFabric.md)
 - [ ] [Logging](Learning_by_doing/Logging.md)
