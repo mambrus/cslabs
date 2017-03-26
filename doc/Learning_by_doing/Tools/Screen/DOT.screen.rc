@@ -24,9 +24,8 @@ activity "Activity in %t(%n)"
 bindkey ^[[1;2D prev
 bindkey ^[[1;2C next
 
-## Re-map Screen hot-key to <C>-A, <C>-A
-escape ^A^A
-bind o other
+## Re-map Screen hot-key to <C>-z
+escape ^zz
 
 shelltitle "shell"
 shell -$SHELL
