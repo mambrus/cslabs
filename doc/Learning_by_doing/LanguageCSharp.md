@@ -18,17 +18,17 @@ directly in one of the applied projects
 
 ## Targeted areas
 
-- [x] Parameters
+- [x] [Properties](https://www.tutorialspoint.com/csharp/csharp_properties.htm)
 - [x] Indexers
 - [x] Exeptions
-- [ ] Attributes
-  - [ ] Reflections
+- [ ] [Attributes](https://www.tutorialspoint.com/csharp/csharp_attributes.htm)
+  - [ ] [Reflections](https://www.tutorialspoint.com/csharp/csharp_reflection.htm)
+- [ ] [LINQ](https://www.tutorialspoint.com/linq/index.htm)
+  - [ ] [Lambda expressions](https://www.tutorialspoint.com/linq/linq_lambda_expressions.htm) 
 - [ ] [Collections fundamenta](http://www.c-sharpcorner.com/UploadFile/dacca2/implement-ienumerable-interface-in-C-Sharp/)
 - [ ] Delegates
   - [ ] [Events](https://www.tutorialspoint.com/csharp/csharp_events.htm) 
 - [ ] Constraints
-- [ ] [LINQ](https://www.tutorialspoint.com/linq/index.htm)
-  - [ ] [Lambda expressions](https://www.tutorialspoint.com/linq/linq_lambda_expressions.htm) 
 - [ ] Threading
 
 *(Plan so far. Probably more to follow...)*
