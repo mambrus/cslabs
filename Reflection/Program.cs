@@ -60,7 +60,6 @@ namespace Reflection
       rectangle.Display();
       Console.WriteLine("========================");
       Type classInfo = typeof(Rectangle);
-      System.Guid goodType = Guid.Empty;
 
       #region iterating through the attribtues of the Rectangle class
 
@@ -73,7 +72,6 @@ namespace Reflection
         if (null != dbi)
         {
           PrintBug(ref dbi);
-          goodType = dbi.GetType().GUID;
         }
       }
 
@@ -91,7 +89,7 @@ namespace Reflection
         Console.Write("Method: {0}", methodInfo.Name);
         foreach (Attribute methodAttribute in methodInfo.GetCustomAttributes(true))
         {
-          if (methodAttribute.GetType().GUID == goodType)
+          if (methodAttribute.GetType() == typeof(BugTag))
           {
             if (!hasCRd)
             {
