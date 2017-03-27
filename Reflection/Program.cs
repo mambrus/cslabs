@@ -1,6 +1,7 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Reflection;
-
+using System.Runtime.InteropServices;
 using Reflection.Attributes;
 
 namespace Reflection
@@ -23,6 +24,7 @@ namespace Reflection
     }
 
     [BugTag(55, "Zara Ali", "19/10/2012", Message = "Return type mismatch")]
+    [BugTag(57, "My Self", "19/10/2016", Message = "It's just bad...")]
     public double GetArea()
     {
       return length * width;
@@ -58,6 +60,7 @@ namespace Reflection
       rectangle.Display();
       Console.WriteLine("========================");
       Type classInfo = typeof(Rectangle);
+      System.Guid goodType = Guid.Empty;
 
       #region iterating through the attribtues of the Rectangle class
 
@@ -70,6 +73,7 @@ namespace Reflection
         if (null != dbi)
         {
           PrintBug(ref dbi);
+          goodType = dbi.GetType().GUID;
         }
       }
 
@@ -80,16 +84,31 @@ namespace Reflection
       Console.WriteLine();
       Console.WriteLine("Print bugs tagged for each method");
       Console.WriteLine("=====================================");
+
       foreach (MethodInfo methodInfo in classInfo.GetMethods())
       {
-        Console.WriteLine("Method: {0}", methodInfo.Name);
-        Console.WriteLine("........................");
+        bool hasCRd = false;
+        Console.Write("Method: {0}", methodInfo.Name);
         foreach (Attribute methodAttribute in methodInfo.GetCustomAttributes(true))
         {
-          BugTag dbi = (BugTag) methodAttribute;
-          if (null != dbi)
+          if (methodAttribute.GetType().GUID == goodType)
           {
+            if (!hasCRd)
+            {
+              Console.WriteLine();
+              hasCRd = true;
+            }
+            Console.WriteLine("........................");
+            BugTag dbi = (BugTag) methodAttribute;
             PrintBug(ref dbi);
+          }
+          else
+          {
+            if (!hasCRd)
+            {
+              Console.WriteLine("  <<< is a Base member");
+              hasCRd = true;
+            }
           }
         }
       }
