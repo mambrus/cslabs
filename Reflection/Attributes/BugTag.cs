@@ -2,46 +2,25 @@
 
 namespace Reflection.Attributes
 {
-  [AttributeUsage(AttributeTargets.Class |
-                  AttributeTargets.Constructor |
-                  AttributeTargets.Field |
-                  AttributeTargets.Method |
-                  AttributeTargets.Property,
-    AllowMultiple = true)]
+  [AttributeUsage(AttributeTargets.All, AllowMultiple = true)]
 
   public class BugTag : System.Attribute
   {
-    private int bugNo;
-    private string developer;
-    private string lastReview;
-    public string message;
 
     public BugTag(int bg, string dev, string d)
     {
-      this.bugNo = bg;
-      this.developer = dev;
-      this.lastReview = d;
+      BugNo = bg;
+      Developer = dev;
+      LastReview = d;
     }
 
-    public int BugNo
-    {
-      get { return bugNo; }
-    }
+    public int BugNo { get; }
 
-    public string Developer
-    {
-      get { return developer; }
-    }
+    public string Developer { get; }
 
-    public string LastReview
-    {
-      get { return lastReview; }
-    }
+    public string LastReview { get; }
 
-    public string Message
-    {
-      get { return message; }
-      set { message = value; }
-    }
+    public string Message { get; set; }
+
   }
 }

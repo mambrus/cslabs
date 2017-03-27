@@ -1,7 +1,9 @@
-﻿using System;
-using System.ComponentModel;
+﻿#define SHOW_BUGS_FOR_CLASS
+#define SHOW_BUGS_FOR_METHODS
+
+using System;
+using System.Diagnostics;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using Reflection.Attributes;
 
 namespace Reflection
@@ -41,11 +43,14 @@ namespace Reflection
 
   #endregion
 
-  #region class Program
+  #region Class Program
 
   class Program
   {
     static void PrintBug(ref BugTag dbi)
+
+      #region Helper function
+
     {
       Console.WriteLine("Bug no: {0}", dbi.BugNo);
       Console.WriteLine("Developer: {0}", dbi.Developer);
@@ -54,15 +59,14 @@ namespace Reflection
       Console.WriteLine("........................");
     }
 
-    static void Main(string[] args)
-    {
-      Rectangle rectangle = new Rectangle(4.5, 7.5);
-      rectangle.Display();
-      Console.WriteLine("========================");
-      Type classInfo = typeof(Rectangle);
+    #endregion
+
+    [Conditional("SHOW_BUGS_FOR_CLASS")]
+    static void ShowBugsForClass(ref Type classInfo)
 
       #region iterating through the attribtues of the Rectangle class
 
+    {
       Console.WriteLine();
       Console.WriteLine("Print bugs tagged for Rectangle class");
       Console.WriteLine("=====================================");
@@ -74,11 +78,17 @@ namespace Reflection
           PrintBug(ref dbi);
         }
       }
+    }
 
-      #endregion
+    #endregion
+
+
+    [Conditional("SHOW_BUGS_FOR_METHODS")]
+    static void ShowBugsForMethods(ref Type classInfo)
 
       #region  iterating through the method attribtues
 
+    {
       Console.WriteLine();
       Console.WriteLine("Print bugs tagged for each method");
       Console.WriteLine("=====================================");
@@ -110,8 +120,20 @@ namespace Reflection
           }
         }
       }
+    }
 
-      #endregion
+    #endregion
+
+    static void Main(string[] args)
+    {
+      Rectangle rectangle = new Rectangle(4.5, 7.5);
+      rectangle.Display();
+      Console.WriteLine("========================");
+      Type classInfo = typeof(Rectangle);
+
+      ShowBugsForClass(ref classInfo);
+      ShowBugsForMethods(ref classInfo);
+
 
       Console.ReadLine();
     }
