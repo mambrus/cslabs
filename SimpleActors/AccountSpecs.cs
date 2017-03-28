@@ -6,20 +6,49 @@
   [TestFixture]
   class AccountSpecs
   {
-    private Account _account;
-
-    [SetUp]
-    public void Init()
+    [Test]
+    public void Charging_an_account_should_adjust_the_balence()
     {
-      _account = new Account(100m);
+      var account = new Account(100.0m);
+      account.Charge(50.0m);
+
+      Console.WriteLine("Available credit; {0}", account.AvailableCredit);
+      Assert.AreEqual(50.0m, account.AvailableCredit);
     }
 
     [Test]
-    public void Chargeing_an_account_should_adjust_the_balence()
+    public void Charging_and_paying_an_account_should_adjust_the_balence()
     {
-      Assert.AreEqual(0m, _account.Balance);
-      _account.Charge(10m);
-      Assert.AreEqual(110m, _account.AvailableCredit);
+      var account = new Account(100.0m);
+      account.Charge(50.0m);
+      account.ApplyPayment(25.0m);
+
+      Console.WriteLine("Available credit; {0}", account.AvailableCredit);
+      Assert.AreEqual(75.0m, account.AvailableCredit);
     }
+
+    [Test]
+    public void Applying_payment_async_messes_up_the_works()
+    {
+      var account = new Account(100.0m);
+      account.Charge(50.0m);
+      account.ApplyPaymentAsync(25.0m);
+
+      Console.WriteLine("Available credit; {0}", account.AvailableCredit);
+      Assert.AreEqual(75.0m, account.AvailableCredit);
+    }
+
+    [SetUp]
+    public void Setup()
+    {
+      Console.WriteLine("Start: {0}", DateTime.UtcNow);
+    }
+
+    [TearDown]
+    public void Teardown()
+    {
+      Console.WriteLine("Stop: {0}", DateTime.UtcNow);
+    }
+
   }
 }

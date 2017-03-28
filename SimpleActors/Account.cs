@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SimpleActors
@@ -19,10 +16,10 @@ namespace SimpleActors
       Balance = 0.0m;
       AvailableCredit = CreditLimit - Balance;
     }
-
+   
     public void Charge(decimal amount)
     {
-      Balance -= amount;
+      Balance += amount;
       AvailableCredit = CalculateAvailableCredit();
     }
     public void ApplyPayment(decimal amount)
@@ -40,6 +37,10 @@ namespace SimpleActors
 
     private decimal CalculateAvailableCredit()
     {
+      // Simulate some SQL query that takes time (may not be necessay on 
+      // some mashines as intended failure will occure mostly)
+      Thread.Sleep(5000);
+       
       return CreditLimit - Balance;
     }
   }
