@@ -1,24 +1,12 @@
-# Learning by doing **X**
+# Learning by doing **Automated testing**
 
 ## Plan / work
 
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
-
-### Check-list
-
-## Fundamentals
-
-## Targeted areas
+- [ ] Set-up and run a simple test for a simple application from scratch
 
 ## References
+
+* [NUnit attributes](https://github.com/nunit/docs/wiki/Attributes)
 
 ### Tutorials & Labs
 

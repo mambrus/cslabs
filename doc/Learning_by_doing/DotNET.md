@@ -10,12 +10,15 @@ Check-off the list below
 
 ## Targeted areas
 
-- [ ] C# Actor Model Programming (Carl Hewitt)
+- [ ] Actors (??)
+   - [ ] Theory: C# Actor Model Programming (Carl Hewitt)
+   - [ ] "Theory": Microsofts implementation *(may skip this due to personal prejudice)**
+   - [ ] Set-up and run a simple Actor-based application from scratch (NOTE: *non SF*)
 
 *(Plan so far. Probably more to follow...)*
 
 ## References
 
 * [Chris Patterson blog](https://lostechies.com/chrispatterson/2011/11/15/actor-model-programming-in-c/) - 
-    * See the authors reference: [github broject](https://github.com/phatboyg/Stact)
+    * Chris's reference project: [github project](https://github.com/phatboyg/Stact)
     * Talk at [Öredev](https://vimeo.com/36279100)

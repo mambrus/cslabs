@@ -44,6 +44,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{C8E6821A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection", "Reflection\Reflection.csproj", "{D6698CC3-00B9-424F-BBC4-78B2FA4451BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleActors", "SimpleActors\SimpleActors.csproj", "{B4E3205F-65F8-40A8-8E7A-C16D489357DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{D6698CC3-00B9-424F-BBC4-78B2FA4451BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6698CC3-00B9-424F-BBC4-78B2FA4451BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6698CC3-00B9-424F-BBC4-78B2FA4451BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E3205F-65F8-40A8-8E7A-C16D489357DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E3205F-65F8-40A8-8E7A-C16D489357DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E3205F-65F8-40A8-8E7A-C16D489357DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E3205F-65F8-40A8-8E7A-C16D489357DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
