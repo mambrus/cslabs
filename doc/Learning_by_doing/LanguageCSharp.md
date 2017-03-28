@@ -10,7 +10,7 @@ directly in one of the applied projects.
 ## Fundamentals
 
 - [x] Inheritance
-- [x] Interface
+- [x] Interfacegit st
 - [x] Generics
 - [x] Namespaces
 - [x] Operator overloading
@@ -24,10 +24,14 @@ directly in one of the applied projects.
 - [ ] [Attributes](https://www.tutorialspoint.com/csharp/csharp_attributes.htm)
   - [ ] [Reflections](https://www.tutorialspoint.com/csharp/csharp_reflection.htm)
 - [ ] [LINQ](https://www.tutorialspoint.com/linq/index.htm)
-  - [ ] [Lambda expressions](https://www.tutorialspoint.com/linq/linq_lambda_expressions.htm)
+  - [x] [Lambda expressions](https://www.tutorialspoint.com/linq/linq_lambda_expressions.htm)
+ 
 - [ ] [Collections fundamenta](http://www.c-sharpcorner.com/UploadFile/dacca2/implement-ienumerable-interface-in-C-Sharp/)
 - [ ] Delegates
   - [ ] [Events](https://www.tutorialspoint.com/csharp/csharp_events.htm)
+  - [x] `Func< T >`
+  - [ ] `Action< T >`
+  - [ ] `Predicate< T >`
 - [ ] Constraints
 - [ ] Threading
 
@@ -41,6 +45,7 @@ directly in one of the applied projects.
 		* [Operators](https://www.tutorialspoint.com/csharp/csharp_operators.htm)
 * "Language" specifics
     * [Auto-Implemented Properties](https://msdn.microsoft.com/en-us/library/bb383979.aspx)
+    * [Q: Func vs. Action vs. Predicate](http://stackoverflow.com/questions/4317479/func-vs-action-vs-predicate) 
 
 * Cmake
 	* [CMake and VisualStudio](https://cognitivewaves.wordpress.com/cmake-and-visual-studio/)
