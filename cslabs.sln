@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection", "Reflection\Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleActors", "SimpleActors\SimpleActors.csproj", "{B4E3205F-65F8-40A8-8E7A-C16D489357DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitQuickStart", "NUnitQuickStart\NUnitQuickStart.csproj", "{2791C109-A27B-4B85-AE42-37176AD8DC71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -80,6 +82,10 @@ Global
 		{B4E3205F-65F8-40A8-8E7A-C16D489357DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4E3205F-65F8-40A8-8E7A-C16D489357DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4E3205F-65F8-40A8-8E7A-C16D489357DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2791C109-A27B-4B85-AE42-37176AD8DC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2791C109-A27B-4B85-AE42-37176AD8DC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2791C109-A27B-4B85-AE42-37176AD8DC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2791C109-A27B-4B85-AE42-37176AD8DC71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
