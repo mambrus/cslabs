@@ -6,11 +6,20 @@
   [TestFixture]
   class AccountSpecs
   {
-    [Test]
-    static void Chargeing_an_account_should_adjust_the_balence()
+    private Account _account;
+
+    [SetUp]
+    public void Init()
     {
-      Console.WriteLine("Hello world");
-      Console.ReadKey();
+      _account = new Account(100m);
+    }
+
+    [Test]
+    public void Chargeing_an_account_should_adjust_the_balence()
+    {
+      Assert.AreEqual(0m, _account.Balance);
+      _account.Charge(10m);
+      Assert.AreEqual(110m, _account.AvailableCredit);
     }
   }
 }
