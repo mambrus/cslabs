@@ -92,3 +92,18 @@ namespace Bank
     }
   }
 }
+
+namespace NUnitQuickStart
+{
+  using System;
+
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("You're not supposed to run this. Use NUnit executive instead..");
+
+      Console.ReadKey();
+    }
+  }
+}
