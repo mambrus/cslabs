@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SimpleActors.Messages
 {
   class AccountBalance
   {
-    public decimal Balance { get; set; }
+    public decimal Balance { set; get; } = 0.0m;
+    public decimal AvailableCredit {set; get; } = 0.0m;
+    public decimal CreditLimit { set; get; } = 0.0m;
   }
 }

@@ -7,17 +7,28 @@ namespace SimpleActors.Model
 
   public class AccountActor : Actor
   {
-    decimal _balance;
-    decimal _creditLimit;
+    private decimal _balance;
+    private decimal _creditLimit;
+    private decimal _availableCredit;
 
     public AccountActor(Inbox inbox)
     {
+      // Default credit-limit
+      _creditLimit = 1000.0m;
+
       inbox.Receive<Request<QueryAccountBalance>>(message =>
       {
-        message.Respond(new AccountBalance // <== Set BP here
+        message.Respond(new AccountBalance
         {
-          Balance = _balance
+          Balance = _balance,
+          AvailableCredit = _availableCredit,
         });
+      });
+
+      inbox.Receive<ChargeAccount>(message =>
+      {
+        _balance = message.Amount;
+        _availableCredit = _creditLimit - _balance;
       });
     }
 

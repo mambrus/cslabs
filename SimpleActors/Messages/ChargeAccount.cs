@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace SimpleActors.Messages
 {
   class ChargeAccount
   {
+    public decimal Amount { get; set; } = 0.0m;
   }
 }

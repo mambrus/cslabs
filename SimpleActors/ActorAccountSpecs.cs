@@ -26,7 +26,7 @@ namespace SimpleActors
         account.Request(new QueryAccountBalance(), inbox)
           .Receive<AccountBalance>(message =>
           {
-            Console.WriteLine("Balance is {0}", message.Balance); // <== Set BP here
+            Console.WriteLine("Balance is {0}", message.Balance);
             result.Complete(true);
           });
       });
