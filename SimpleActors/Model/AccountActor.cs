@@ -4,6 +4,7 @@ namespace SimpleActors.Model
 {
   using Stact;
   using Messages;
+  using System.Threading;
 
   public class AccountActor : Actor
   {
@@ -11,25 +12,45 @@ namespace SimpleActors.Model
     private decimal _creditLimit;
     private decimal _availableCredit;
 
-    public AccountActor(Inbox inbox)
+    public AccountActor(Inbox inbox, decimal creditLimit)
     {
-      // Default credit-limit
-      _creditLimit = 1000.0m;
+      _creditLimit = creditLimit;
+      _balance = 0.0m;
+      _availableCredit = _creditLimit - _balance;
 
-      inbox.Receive<Request<QueryAccountBalance>>(message =>
+      AsyncBehaviour(inbox);      
+    }
+
+    private void AsyncBehaviour(Inbox inbox)
+    {
+      inbox.Loop(loop =>
       {
-        message.Respond(new AccountBalance
+        loop.Receive<Request<QueryAccountBalance>>(message =>
         {
-          Balance = _balance,
-          AvailableCredit = _availableCredit,
+          message.Respond(new AccountBalance
+          {
+            Balance = _balance,
+            AvailableCredit = _availableCredit,
+            CreditLimit = _creditLimit,
+          });
+          loop.Continue();
+        });
+
+        loop.Receive<ChargeAccount>(message =>
+        {
+          _balance += message.Amount;
+          _availableCredit = CalculateAvailableCredit();
+          loop.Continue();
         });
       });
+    }
 
-      inbox.Receive<ChargeAccount>(message =>
-      {
-        _balance = message.Amount;
-        _availableCredit = _creditLimit - _balance;
-      });
+    private decimal CalculateAvailableCredit()
+    {
+      // Simulate some remote SQL query that takes time
+      Thread.Sleep(5000);
+
+      return CreditLimit - Balance;
     }
 
     public decimal Balance

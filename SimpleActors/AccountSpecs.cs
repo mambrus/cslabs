@@ -6,6 +6,7 @@
   [TestFixture]
   class AccountSpecs
   {
+    #region Charging_an_account_should_adjust_the_balence
     [Test]
     public void Charging_an_account_should_adjust_the_balence()
     {
@@ -15,7 +16,9 @@
       Console.WriteLine("Available credit; {0}", account.AvailableCredit);
       Assert.AreEqual(50.0m, account.AvailableCredit);
     }
+    #endregion
 
+    #region Charging_and_paying_an_account_should_adjust_the_balence
     [Test]
     public void Charging_and_paying_an_account_should_adjust_the_balence()
     {
@@ -26,7 +29,9 @@
       Console.WriteLine("Available credit; {0}", account.AvailableCredit);
       Assert.AreEqual(75.0m, account.AvailableCredit);
     }
+    #endregion
 
+    #region Applying_payment_async_messes_up_the_works
     [Test]
     public void Applying_payment_async_messes_up_the_works()
     {
@@ -37,7 +42,9 @@
       Console.WriteLine("Available credit; {0}", account.AvailableCredit);
       Assert.AreEqual(75.0m, account.AvailableCredit);
     }
+    #endregion
 
+    #region Setup & Teardown
     [SetUp]
     public void Setup()
     {
@@ -49,6 +56,6 @@
     {
       Console.WriteLine("Stop: {0}", DateTime.UtcNow);
     }
-
+    #endregion
   }
 }
