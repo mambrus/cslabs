@@ -60,6 +60,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActorAccountSpecs.cs" />
+    <Compile Include="Messages\AccountBalance.cs" />
+    <Compile Include="Messages\ChargeAccount.cs" />
+    <Compile Include="Messages\PayAccount.cs" />
+    <Compile Include="Messages\QueryAccountBalance.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="AccountSpecs.cs" />
     <Compile Include="Model\AccountActor.cs" />

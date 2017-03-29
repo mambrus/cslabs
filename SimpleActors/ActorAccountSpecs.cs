@@ -1,4 +1,6 @@
-﻿using SimpleActors.Model;
+﻿using SimpleActors.Messages;
+using SimpleActors.Model;
+using Stact.Internal;
 
 namespace SimpleActors
 {
@@ -13,9 +15,10 @@ namespace SimpleActors
     [Test]
     public void FirstTestName()
     {
-      var account = ActorFactory.Create(x => new AccountActor()).GetActor();
+      
+      ActorRef account = ActorFactory.Create(inbox => new AccountActor(inbox)).GetActor();
 
-      //account.
+      account.Send(new QueryAccountBalance());
     }
   }
 }
