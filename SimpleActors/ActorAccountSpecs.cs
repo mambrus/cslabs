@@ -15,7 +15,6 @@ namespace SimpleActors
     [Test]
     public void FirstTestName()
     {
-      
       ActorRef account = ActorFactory.Create(inbox => new AccountActor(inbox)).GetActor();
 
       account.Send(new QueryAccountBalance());

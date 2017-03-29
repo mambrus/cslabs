@@ -8,5 +8,6 @@ namespace SimpleActors.Messages
 {
   class AccountBalance
   {
+    public decimal Balance { get; set; }
   }
 }
