@@ -14,7 +14,7 @@ namespace SimpleActors.Model
     {
       inbox.Receive<Request<QueryAccountBalance>>(message =>
       {
-        message.Respond(new AccountBalance
+        message.Respond(new AccountBalance // <== Set BP here
         {
           Balance = _balance
         });
