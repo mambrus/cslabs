@@ -1,4 +1,4 @@
-﻿namespace SimpleActors
+﻿namespace SimpleActors.Model
 {
   using System;
 

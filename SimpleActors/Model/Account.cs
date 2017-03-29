@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SimpleActors
+namespace SimpleActors.Model
 {
   class Account
   {
