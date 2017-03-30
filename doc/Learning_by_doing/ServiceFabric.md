@@ -36,3 +36,50 @@
   * See inparticular the Actor samples:
    [`ActorCounter`](https://github.com/Azure-Samples/service-fabric-java-getting-started/tree/master/Actors/ActorCounter),
    [`VisualObjectActor`](https://github.com/Azure-Samples/service-fabric-java-getting-started/tree/master/Actors/VisualObjectActor)
+
+
+
+# Notes
+
+## My First SF Actor Lab
+
+### Create a project into umbrella-project
+
+Create project:
+
+* Create a directory **two levels** down your umbrella project
+  * `mkdir -p ServiceFabric/ActorLabs`
+* **But** use another instance of Visual Studio (keep the names suggested in walk-through)
+* Follow the guide at the first bullet under *Turorials..* above.
+  * This will create yet a third sub-level: `MyActorApplication`
+* Build and run *as is*. This should deploy on your localhost.
+  * Diagnostic Events should open and the last message should be `RunAsync has successfully completed for a stateful service replica`
+  * SF explorer at [http://localhost:19080](http://localhost:19080)
+    * `Cluster->Application->`: MyActorApplication**Type**
+    * `Nodes->`and `System->` populated accordingly
+
+Notice that:
+
+- 3 projects have been created `MyActor`, `MyActor.interfaces`, `MyActoatApplication`
+  - The last one contains only scripts and config, but is the one which is set as *default project*.
+- Build options are set to `Debug`and `x64`
+
+Incoorperate into umbrella-project
+
+* Stop debug, close ploject & open your umbrella-project instead (as root)
+* In `Solution Explorer` add `Add`->`New Solution Folder` twice recursively and with the same names as the directory structure created
+  I.e `ServiceFabric/ActorLabs
+* Right-click on `ActorLabs` and `Add`->`Existing Project`
+* Set the Build-options as before: `Debug`and `x64
+* Build and run as before and checkt that it deploys as before.
+
+Add to SCM:
+
+```bash
+cd $PROJROOT
+git add .
+git commit -a -m"Service Fabric application created and added from template"
+```
+
+*Voilá!*
+
