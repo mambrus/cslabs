@@ -60,6 +60,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyActor.Interfaces", "Servi
 EndProject
 Project("{A07B5EB6-E848-4116-A8D0-A826331D98C6}") = "MyActorApplication", "ServiceFabric\ActorLabs\MyActorApplication\MyActorApplication\MyActorApplication.sfproj", "{B5FFF80E-27F2-4ACF-8B9C-1D950C301FCE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Threading", "Threading", "{36A03063-1594-41C9-A7D6-9B6E6964F7E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CancellationToken", "Threading\CancellationToken\CancellationToken.csproj", "{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -160,6 +164,14 @@ Global
 		{B5FFF80E-27F2-4ACF-8B9C-1D950C301FCE}.Release|x64.ActiveCfg = Release|x64
 		{B5FFF80E-27F2-4ACF-8B9C-1D950C301FCE}.Release|x64.Build.0 = Release|x64
 		{B5FFF80E-27F2-4ACF-8B9C-1D950C301FCE}.Release|x64.Deploy.0 = Release|x64
+		{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3}.Debug|x64.Build.0 = Debug|Any CPU
+		{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3}.Release|x64.ActiveCfg = Release|Any CPU
+		{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,5 +184,6 @@ Global
 		{172CCC9F-8537-407E-9693-F4C2AD9774B8} = {2DDE1EBD-9905-4006-8E53-DCCA1064DBAC}
 		{8EA965EF-3D1D-416A-A1CF-748E793E3C84} = {2DDE1EBD-9905-4006-8E53-DCCA1064DBAC}
 		{B5FFF80E-27F2-4ACF-8B9C-1D950C301FCE} = {2DDE1EBD-9905-4006-8E53-DCCA1064DBAC}
+		{DF550C9C-63E1-4896-AB1D-D38EF8E6BDA3} = {36A03063-1594-41C9-A7D6-9B6E6964F7E2}
 	EndGlobalSection
 EndGlobal
