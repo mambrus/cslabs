@@ -25,7 +25,6 @@ directly in one of the applied projects.
   - [x] [Reflections](https://www.tutorialspoint.com/csharp/csharp_reflection.htm)
 - [ ] [LINQ](https://www.tutorialspoint.com/linq/index.htm)
   - [x] [Lambda expressions](https://www.tutorialspoint.com/linq/linq_lambda_expressions.htm)
- 
 - [ ] [Collections fundamenta](http://www.c-sharpcorner.com/UploadFile/dacca2/implement-ienumerable-interface-in-C-Sharp/)
 - [ ] Delegates
   - [ ] [Events](https://www.tutorialspoint.com/csharp/csharp_events.htm)
@@ -34,9 +33,9 @@ directly in one of the applied projects.
   - [ ] `Predicate< T >`
 - [ ] Constraints
 - [ ] Windows (C#) concurrency techniques
-   - [ ] Threads
+   - [ ] [Threads](https://www.tutorialspoint.com/csharp/csharp_multithreading.htm)
    - [ ] Task
-     - [x] `TaskFactory` and group sychronization 
+     - [x] `TaskFactory` and group sychronization
    - [ ] Synchronization
      - [ ] [Cancelaton token](https://msdn.microsoft.com/en-us/library/system.threading.cancellationtokensource(v=vs.110).aspx)
        - [ ] Used for canceling
@@ -52,7 +51,7 @@ directly in one of the applied projects.
 		* [Operators](https://www.tutorialspoint.com/csharp/csharp_operators.htm)
 * "Language" specifics
     * [Auto-Implemented Properties](https://msdn.microsoft.com/en-us/library/bb383979.aspx)
-    * [Q: Func vs. Action vs. Predicate](http://stackoverflow.com/questions/4317479/func-vs-action-vs-predicate) 
+    * [Q: Func vs. Action vs. Predicate](http://stackoverflow.com/questions/4317479/func-vs-action-vs-predicate)
 
 * CMake
 	* [CMake and VisualStudio](https://cognitivewaves.wordpress.com/cmake-and-visual-studio/)
@@ -72,7 +71,7 @@ directly in one of the applied projects.
 
 ## 2017-04-27
 
-## Language rambling
+### Language ranting
 
 C# is not a language, it's a script-syntax and a run-time. Similar to Java
 and Java class-libraries in a sense, but with the difference that Java
@@ -94,10 +93,33 @@ price. I have i.e. serious doubts C# will ever become standard/preferred for
 embedded use-case. *The two with fit together as badly as children and
 bazookas...* :-)
 
-## Other
+### Other
 
 **I'm considering** to abandon the ** polygons_cxx\* ** projects and
 continue with **polygons_cs** only. The differences between *C++* and *C#*
 start to become too great as many C# language features just don't have any
 corresponding equality in C++. Keeping the shadow C++ projects on par,
 considering how much slower writing in C++ is, has become a serious burden.
+
+## 2017-04-31
+
+### Concurrency (ranting)
+
+Windows threads for C# (`System.Threading.Thread`) is primitive *(IIRC, so
+is the actual OS)*. Adding pain to insult is the task concept
+(`System.Threading.Tasks.Task`) and the fact that the whole
+sub-group/namespace (`System.Threading.*`) is misleading. A more appropriate
+name would be *"Concurrency"* (i.e. `System.Concurrency.`) as, admittedly
+vague, it's at least not quite bluntly untrue.
+
+* The former doesn't have good synchronisation primitives
+* The latter has synchronisation but hardly *actually* needs it
+
+I suppose this is a consequence of that *IT-muppets* find threading hard to
+understand.
+
+Given that real threading is discouraged, it's almost pointless doing a lab
+it but I'll do it any-way just to have a look-reference.
+
+**However:** Knowing *Which* is *which* and most importantly *what*
+explains a few things wrt [Service Fabric](ServiceFabric.md).
