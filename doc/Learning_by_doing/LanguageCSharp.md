@@ -29,7 +29,7 @@ directly in one of the applied projects.
 - [ ] Delegates
   - [ ] [Events](https://www.tutorialspoint.com/csharp/csharp_events.htm)
   - [x] `Func< T >`
-  - [ ] `Action< T >`
+  - [x] `Action< T >`
   - [ ] `Predicate< T >`
 - [ ] Constraints
 - [ ] Windows (C#) concurrency techniques
