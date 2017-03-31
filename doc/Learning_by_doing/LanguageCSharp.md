@@ -10,7 +10,7 @@ directly in one of the applied projects.
 ## Fundamentals
 
 - [x] Inheritance
-- [x] Interfacegit st
+- [x] Interface
 - [x] Generics
 - [x] Namespaces
 - [x] Operator overloading
@@ -21,8 +21,8 @@ directly in one of the applied projects.
 - [x] [Properties](https://www.tutorialspoint.com/csharp/csharp_properties.htm)
 - [x] Indexers
 - [x] Exeptions
-- [ ] [Attributes](https://www.tutorialspoint.com/csharp/csharp_attributes.htm)
-  - [ ] [Reflections](https://www.tutorialspoint.com/csharp/csharp_reflection.htm)
+- [x] [Attributes](https://www.tutorialspoint.com/csharp/csharp_attributes.htm)
+  - [x] [Reflections](https://www.tutorialspoint.com/csharp/csharp_reflection.htm)
 - [ ] [LINQ](https://www.tutorialspoint.com/linq/index.htm)
   - [x] [Lambda expressions](https://www.tutorialspoint.com/linq/linq_lambda_expressions.htm)
  
@@ -33,7 +33,14 @@ directly in one of the applied projects.
   - [ ] `Action< T >`
   - [ ] `Predicate< T >`
 - [ ] Constraints
-- [ ] Threading
+- [ ] Windows (C#) concurrency techniques
+   - [ ] Threads
+   - [ ] Task
+     - [x] `TaskFactory` and group sychronization 
+   - [ ] Synchronization
+     - [ ] [Cancelaton token](https://msdn.microsoft.com/en-us/library/system.threading.cancellationtokensource(v=vs.110).aspx)
+       - [ ] Used for canceling
+       - [x] [completion notification (blocking)](https://msdn.microsoft.com/en-us/library/dd997364(v=vs.110).aspx)
 
 *(Plan so far. Probably more to follow...)*
 
@@ -47,7 +54,7 @@ directly in one of the applied projects.
     * [Auto-Implemented Properties](https://msdn.microsoft.com/en-us/library/bb383979.aspx)
     * [Q: Func vs. Action vs. Predicate](http://stackoverflow.com/questions/4317479/func-vs-action-vs-predicate) 
 
-* Cmake
+* CMake
 	* [CMake and VisualStudio](https://cognitivewaves.wordpress.com/cmake-and-visual-studio/)
 	* [CMake tutorial](https://cmake.org/cmake-tutorial/)
 	* [Q: Generate from](http://stackoverflow.com/questions/2074144/generate-c-sharp-project-using-cmake)
