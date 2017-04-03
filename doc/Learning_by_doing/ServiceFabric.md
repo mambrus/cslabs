@@ -14,6 +14,7 @@
 
 ## References
 
+* [SF Actors, get started](https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reliable-actors-introduction)
 * [MSDN Class library doc: SF Actors](https://msdn.microsoft.com/library/azure/dn971626.aspx)
 * [Azure Samples in C#](https://github.com/Azure-Samples?utf8=%E2%9C%93&q=fabric&type=&language=c%23)
 
@@ -83,3 +84,32 @@ git commit -a -m"Service Fabric application created and added from template"
 
 *Voilá!*
 
+### Files
+
+The template builds and runs (a service sitting doing nothing):
+
+Source-code (C#, i.e. what counts) as follows:
+
+```
+./MyActor/ActorEventSource.cs
+./MyActor/MyActor.cs
+./MyActor/Program.cs
+./MyActor/Properties/AssemblyInfo.cs
+./MyActor.Interfaces/IMyActor.cs
+./MyActor.Interfaces/Properties/AssemblyInfo.cs
+```
+ 
+Notice:
+
+* Only two directories contan code (execution related)
+  * The third one is a deployment project
+  * Albeit the "real-code" projects are not entirely free from configs and what-not's either
+* Threre exists only one *Main()*, i.e. only one formal process is deployed.
+  * Any conurrency is managed within this project
+  * Replicas not included (i.e. SF's load-balancing)
+
+Analyze:
+
+* This can't scale on demand by itself
+* The interface-class is the main _intended_ way for communication
+  * It mandate's *Task* methods  
